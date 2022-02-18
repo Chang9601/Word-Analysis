@@ -71,7 +71,7 @@ public class ThreadedWordAnalysis {
 			threads[i].start();
 		}
 		
-		// 스레드 순서
+		// 메인 스레드 대기
 		for(int i = 0; i < threadList.size(); i++) {
 			try {
 				threads[i].join();
