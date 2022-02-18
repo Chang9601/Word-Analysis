@@ -14,9 +14,8 @@ public class WordThread implements Runnable {
 	}
 
 	private void processWords(String word, ConcurrentHashMap<String, Integer> wordFrequency) {
-		// 조회와 삽입을 동시에 하기 때문에 스레드 1개만 실행, 따라서 동기화 필요
+		// 조회와 삽입을 동시에 하기 때문에 스레드 1개만 실행, 따라서 synchronized 블록 필요
 		synchronized (wordFrequency) {
-
 			word = word.replaceAll("[^a-zA-Z]", "");
 
 			if (!word.equals("")) {
@@ -30,6 +29,7 @@ public class WordThread implements Runnable {
 
 	@Override
 	public void run() {
+		// Vector는 이미 동기화, 따라서 synchronized 블록 불필요
 		for (String line : lineList) {
 			line = line.strip(); // 양쪽 공백 제거
 			String[] words = line.split(" "); // 공백 단위로 구분

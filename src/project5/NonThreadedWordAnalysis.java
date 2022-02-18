@@ -26,7 +26,7 @@ public class NonThreadedWordAnalysis {
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
 		
-		String path = "C:" + File.separator + "javawork" + File.separator + "books.txt"; // 파일 위치
+		String path = "." + File.separator + "books.txt"; // 파일 위치
 		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF-8")); // 문자 깨짐 방지
 		
 		// 단어 분석 변수

@@ -14,12 +14,12 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ThreadedWordAnalysis {
 	
-	public static final int SIZE = 8000000; // 스레드의 개수를 구하기 위한 크기
+	public static final int SIZE = 6000000; // 스레드의 개수를 구하기 위한 크기
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
 		long startTime = System.nanoTime();
 		
-		String path = "C:" + File.separator + "javawork" + File.separator + "books.txt"; // 파일 위치
+		String path = "." + File.separator + "books.txt"; // 파일 위치
 		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF-8")); // 문자 깨짐 방지
 		
 		// 단어 분석 변수
