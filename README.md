@@ -49,7 +49,7 @@
 
 
 ## 회고
-* 프로젝트 시작 전 멀티스레드가 작업의 분할시키기 때문에 성능이 더 좋을 것이라 가정했다.
+* 프로젝트 시작 전 멀티스레드가 작업을 분할하기 때문에 성능이 더 좋을 것이라 가정했다.
 * 하지만 가정과 반대로 멀티스레드가 더 느렸다. 
 * 멀티스레드가 단일스레드 보다 느린 이유
    1. 멀티스레드가 항상 속도를 향상시키지 않는다. 일반적으로 스레드가 병렬적으로 사용될 수 있는 하드웨어 자원에 접근할 경우 속도가 향상된다.
@@ -60,10 +60,10 @@
 
 
 ## 출처
-Stack Overflow, "multithread runs slower than single threadin", https://stackoverflow.com/questions/46759930/multithreading-slower-than-single-threading, 2022-02-18
+Stack Overflow, "multithread runs slower than single threading", https://stackoverflow.com/questions/46759930/multithreading-slower-than-single-threading, 2022-02-18
 
-Stack Overflow, "multithread runs slower than single threadin", https://stackoverflow.com/questions/36684832/is-multithreading-faster-than-single-thread, 2022-02-18
+Stack Overflow, "multithread runs slower than single threading", https://stackoverflow.com/questions/36684832/is-multithreading-faster-than-single-thread, 2022-02-18
 
-Stack Overflow, "multithread runs slower than single threadin", https://stackoverflow.com/questions/34589623/multithread-runs-slower-than-single-process, 2022-02-18
+Stack Overflow, "multithread runs slower than single threading", https://stackoverflow.com/questions/34589623/multithread-runs-slower-than-single-process, 2022-02-18
 
 Project GutenBerg, https://www.gutenberg.org/browse/scores/top
