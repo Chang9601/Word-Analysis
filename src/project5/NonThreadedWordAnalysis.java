@@ -53,9 +53,6 @@ public class NonThreadedWordAnalysis {
 			}
 		}
 		
-		System.out.println("줄의 개수: " + numlines);
-		System.out.println("해시의 크기: " + wordFrequency.size());
-		
 		// 변수 초기화
 		longestWord = mostCommonWord = null;
 		totalWordCount = totalWordLen = 0;
@@ -89,6 +86,8 @@ public class NonThreadedWordAnalysis {
 		long duration = (endTime - startTime) / 1000000; // 밀리초
 		double timeSpent = 1.0 * duration / 1000; // 초
 		
+		System.out.println("줄의 개수: " + numlines);
+		System.out.println("해시의 크기: " + wordFrequency.size());
 		System.out.println("작업 시간: " + timeSpent + "초");
 		System.out.println("총 단어의 개수: " + totalWordCount);
 		System.out.println("총 단어의 길이: " + totalWordLen);
