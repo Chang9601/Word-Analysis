@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class NonThreadedWordAnalysis {
+public class SinglethreadedWordAnalysis {
 	
 	// 알파벳으로만 구성된 문자열로 처리
 	public static void processWords(String word, Map<String, Integer> wordFrequency) {

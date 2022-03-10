@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class ThreadedWordAnalysis {
+public class MultithreadedWordAnalysis {
 	
 	public static final int SIZE = 6000000; // 스레드의 개수를 구하기 위한 크기
 	
@@ -28,7 +28,7 @@ public class ThreadedWordAnalysis {
 		Vector<String> lineList; // 파일의 줄을 저장하는 배열
 		List<WordThread> threadList = new ArrayList<WordThread>(); // 스레드를 저장하는 배열
 		Thread[] threads = null;
-		ConcurrentHashMap<String, Integer> wordFrequency = new ConcurrentHashMap<String, Integer>(); // 스레드에 안전한 해시, 단어의 개수 저장
+		ConcurrentHashMap<String, Integer> wordFrequency = new ConcurrentHashMap<String, Integer>(); // thread-safe 해시, 단어의 개수 저장
 		String longestWord, mostCommonWord;
 		int longestWordLen, mostCommonWordCount, totalWordCount, totalWordLen;
 		int tot = 0;
